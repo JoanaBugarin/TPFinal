@@ -1,0 +1,107 @@
+.centrado {
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar {
+  text-transform: uppercase;
+}
+
+.navbar-brand img {
+  width: 50px;
+}
+
+.header {
+  background-image: url("fondo.png");
+  height: 450px;
+  background-size: cover;
+}
+
+body {
+  background-color: #ebebeb !important;
+}
+
+.eslogan {
+  font-size: 3.5rem;
+  text-align: right;
+  padding: 130px 20px 0 0;
+}
+
+.cont-desc {
+  background-color: #ffffff;
+  width: 80%;
+  margin: 0 auto;
+  height: 50px;
+  border-radius: 20px;
+  position: relative;
+  top: -25px;
+  display: flex;
+  align-items: center;
+}
+
+.desc-caan {
+  font-size: 1.3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.cont-boton-home {
+  border-radius: 100%;
+  background-color: #9fe5ff;
+}
+
+.cont-boton-home img {
+  width: 150px;
+  height: 160px;
+}
+
+.boton-home {
+  background-color: #ffffff;
+  width: 200px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.carousel-inner {
+  padding: 50px 60px;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("flecha2prev.png") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("flecha2.png") !important;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 4rem !important;
+  height: 5rem !important;
+}
+
+.pad {
+  padding: 0 60px 40px 60px;
+  background-color: #ffffff;
+  border-radius: 0 0 20px 20px;
+}
+
+.home-title-gal {
+  text-transform: uppercase;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 20px 20px 0 0;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.5rem;
+}
