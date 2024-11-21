@@ -1,3 +1,25 @@
+.forgot,
+.forgot:visited,
+.forgot:active,
+.forgot:focus {
+  color: #0097b2; /* Color para enlaces no visitados */
+  text-decoration: none !important; /* Remover el subrayado si deseas */
+  outline: none; /* Remueve el contorno por defecto del navegador */
+}
+
+.navbar-nav .nav-link.active {
+  color: #ffffff !important;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #048298; /* Color cuando el cursor está sobre el enlace */
+}
+
+label {
+  font-weight: 500;
+}
+
 .centrado {
   flex-flow: column;
   align-items: center;
@@ -13,9 +35,13 @@
 }
 
 .header {
-  background-image: url("fondo.png");
+  background-image: url("fondo2.png");
   height: 450px;
   background-size: cover;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 body {
@@ -104,4 +130,54 @@ main {
   margin: 0;
   padding: 10px;
   font-size: 1.5rem;
+}
+
+.panel-adopta {
+  display: flex;
+}
+
+.filtros {
+  display: flex;
+  flex-flow: column;
+}
+
+.cont-animal {
+  width: 250px;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.filtros h2 {
+    font-size:16px
+}
+
+.cont-animal img {
+  object-fit: cover;
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.carac-animal {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.carac-animal p {
+  margin: 0;
+}
+
+span {
+  font-weight: 500;
+}
+
+.galeria {
+  display: flex;
+  width: 85%;
+  flex-flow: row wrap;
 }
