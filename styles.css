@@ -409,3 +409,9 @@ span {
   flex-flow:column;
   align-items: center;
 }
+.boton-accion {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+}
