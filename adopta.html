@@ -19,10 +19,12 @@
   <body>
     <div data-include-html="navbar.html"></div>
     <div class="container">
-      <img
-        src="adopta_header.png"
-        style="max-width: 100%; height: auto; object-fit: cover"
-      />
+      <div class="headers-container">
+        <img
+          src="adopta_header.png"
+          style="max-width: 100%; height: auto; object-fit: cover"
+        />
+      </div>
       <!-- Modal -->
       <div
         class="modal fade"
@@ -255,20 +257,18 @@
               </button>
             </div>
           </div>
-
-          <nav class="pagination">
-            <a href="#" class="prev">&laquo; Anterior</a>
-            <a href="#" class="page active">1</a>
-            <a href="#" class="page">2</a>
-            <a href="#" class="page">3</a>
-            <a href="#" class="page">4</a>
-            <a href="#" class="next">Siguiente &raquo;</a>
-          </nav>
-          </nav>
         </div>
       </div>
     </div>
-    <div class="start-adoption">
+    <nav class="pagination" style="width: 100%; margin: 5px 0">
+      <a href="#" class="prev">&laquo; Anterior</a>
+      <a href="#" class="page active">1</a>
+      <a href="#" class="page">2</a>
+      <a href="#" class="page">3</a>
+      <a href="#" class="page">4</a>
+      <a href="#" class="next">Siguiente &raquo;</a>
+    </nav>
+    <div class="start-adoption mb-4">
       <button onclick="location.href='adopta.html'">Iniciar Adopción</button>
     </div>
     <div data-include-html="footer.html"></div>

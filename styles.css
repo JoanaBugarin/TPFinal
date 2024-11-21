@@ -1,17 +1,17 @@
 .forgot,
 .forgot:visited,
-.forgot:active,
+.forgot:activo,
 .forgot:focus {
   color: #0097b2; /* Color para enlaces no visitados */
   text-decoration: none !important; /* Remover el subrayado si deseas */
   outline: none; /* Remueve el contorno por defecto del navegador */
 }
 
-.navbar-nav .nav-link.active {
+.navbar-nav .nav-link.activo {
   color: #ffffff !important;
   text-decoration: underline;
 }
-a{
+a {
   color: #333 !important;
   text-decoration: none !important;
 }
@@ -155,7 +155,7 @@ main {
 }
 
 .filtros h2 {
-    font-size:16px
+  font-size: 16px;
 }
 
 .cont-animal img {
@@ -234,7 +234,7 @@ span {
   font-size: 16px; /* Tamaño de la fuente */
   padding: 10px 20px; /* Espaciado interno del botón */
   border: none; /* Sin bordes */
-  border-radius: 5px; /* Bordes redondeados */
+  border-radius: 15px; /* Bordes redondeados */
   cursor: pointer; /* Cambia el cursor a "puntero" al pasar sobre el botón */
   transition: background-color 0.3s ease; /* Efecto de transición al pasar el ratón */
 }
@@ -245,7 +245,7 @@ span {
 
 /* Footer general */
 .site-footer {
-  background-color: #82c34a; /* Verde del fondo */
+  background-color: #7ab317; /* Verde del fondo */
   color: #000; /* Color del texto */
   padding: 20px 10px;
   font-family: Arial, sans-serif;
@@ -255,7 +255,7 @@ span {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items:  flex-end;;
+  align-items: flex-end;
   gap: 20px;
   position: relative; /* Por si necesitas ajustar posiciones */
   padding-bottom: 20px; /* Espacio adicional para alinear */
@@ -349,4 +349,63 @@ span {
     text-align: center;
     margin-top: 15px;
   }
+}
+
+.headers-container {
+  background-color: #bdbdbd;
+  display: flex;
+  justify-content: center;
+}
+
+.mercado-pago,
+.cc {
+  padding: 30px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #d3dfbe;
+  margin: 20px 0;
+  border-radius: 20px;
+  width: 460px;
+}
+
+.mercado-pago button, .mercado-pago input {
+  width: 100px;
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.mercado-pago input {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.mercado-pago p {
+  margin: 1rem 0 0 0;
+  font-weight: 500;
+}
+
+.mercado-pago input {
+  margin: 1rem 0 0 0;
+}
+
+.mercado-pago button.btn-donar {
+  width: 130px;
+  background-color: #00bf63;
+}
+
+.mercado-pago button.btn-donar:hover {
+  width: 130px;
+  background-color: #069c53;
+}
+
+.suscrip {
+  padding: 30px;
+  background-color: #d3dfbe;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-flow:column;
+  align-items: center;
 }

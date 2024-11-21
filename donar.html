@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CAAN</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div data-include-html="navbar.html"></div>
+    <div class="container">
+      <div class="headers-container">
+        <img
+          src="donar.png"
+          style="max-width: 100%; height: auto; object-fit: cover"
+        />
+      </div>
+      <div style="max-width: 1000px; margin: 0 auto">
+        <div
+          style="
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+          "
+        >
+          <div class="mercado-pago">
+            <img
+              src="meli.png"
+              alt=""
+              style="max-width: 100%; height: auto; object-fit: cover"
+            />
+            <p>Seleccione un monto:</p>
+            <button class="subscribe-button">$1000</button>
+            <button class="subscribe-button">$5000</button>
+            <input placeholder="Otro" />
+            <button class="subscribe-button btn-donar">Donar</button>
+          </div>
+          <div class="cc">
+            <h1
+              style="
+                font-size: 1.8rem;
+                color: #0097b2;
+                margin-bottom: 20px;
+                font-weight: 100;
+              "
+            >
+              Datos de la cuenta corriente
+            </h1>
+            <img src="/Nueva carpeta/credicoop.png" alt="" />
+            <p>Banco Crediccop</p>
+            <p>CBU:</p>
+            <p>1910103555010300835150</p>
+            <p>CUIT:</p>
+            <p>30709492701</p>
+          </div>
+        </div>
+
+        <div class="suscrip">
+          <button class="subscribe-button" style="font-size: 20px">
+            Suscribirme a la donación mensual
+          </button>
+          <h2 style="font-size: 1.5rem; font-weight: 400; margin: 20px 0">
+            ¿Qué implica una suscripción para donar mensualmente a una
+            asociación protectora de animales?
+          </h2>
+          <p>
+            Al suscribirte como donante mensual, te conviertes en un aliado
+            clave en la misión de proteger y cuidar a los animales. Este
+            compromiso recurrente asegura que podamos contar con un ingreso
+            estable para cubrir necesidades esenciales como alimentación,
+            atención veterinaria, refugio y rescate.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div data-include-html="footer.html"></div>
+
+    <script src="include.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
