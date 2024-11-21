@@ -64,9 +64,98 @@
             <p>30709492701</p>
           </div>
         </div>
+        <!-- Modal -->
+        <div
+        class="modal fade"
+        id="subscribeModal"
+        tabindex="-1"
+        aria-labelledby="subscribeModalLabel"
+        aria-hidden="true"
+        >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="border: none; justify-content: center">
+              <h1
+                class="modal-title fs-5"
+                id="subscribeModalLabel"
+                style="
+                  font-size: 2.25rem !important;
+                  width: 100%;
+                  color: #0097b2;
+                  text-align: center;
+                "
+              >
+                Suscribirse
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="col-form-label">Nombre:</label>
+                  <input type="text" class="form-control" id="name" required />
+                </div>
+                <div class="mb-3">
+                  <label for="surname" class="col-form-label">Apellido:</label>
+                  <input type="text" class="form-control" id="surname" required />
+                </div>
+                <div class="mb-3">
+                  <label for="docType" class="col-form-label">Tipo de documento:</label>
+                  <select class="form-control" id="docType" required>
+                    <option value="DNI">DNI</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                    <option value="Cédula">Cédula</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="docNumber" class="col-form-label">Número de documento:</label>
+                  <input type="number" class="form-control" id="docNumber" required />
+                </div>
+                <div class="mb-3">
+                  <label for="bank" class="col-form-label">Banco:</label>
+                  <input type="text" class="form-control" id="bank" required />
+                </div>
+                <div class="mb-3">
+                  <label for="cbu" class="col-form-label">C.B.U:</label>
+                  <input type="text" class="form-control" id="cbu" required />
+                </div>
+                <div class="mb-3">
+                  <label for="amount" class="col-form-label">Monto:</label>
+                  <input type="number" class="form-control" id="amount" required />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer" style="justify-content: center; border: none">
+              <button
+                type="button"
+                class="btn btn-primary"
+                style="
+                  background-color: #00bf63;
+                  border-radius: 20px;
+                  border: none;
+                  padding: 10px 20px;
+                "
+              >
+                Confirmar
+              </button>
+            </div>
+          </div>
+        </div>
+        </div>
 
+        <!-- Botón para abrir el modal -->
         <div class="suscrip">
-          <button class="subscribe-button" style="font-size: 20px">
+          <button
+            class="subscribe-button"
+            style="font-size: 20px"
+            data-bs-toggle="modal"
+            data-bs-target="#subscribeModal"
+          >
             Suscribirme a la donación mensual
           </button>
           <h2 style="font-size: 1.5rem; font-weight: 400; margin: 20px 0">
