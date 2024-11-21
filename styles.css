@@ -11,7 +11,10 @@
   color: #ffffff !important;
   text-decoration: underline;
 }
-
+a{
+  color: #333 !important;
+  text-decoration: none !important;
+}
 a:hover {
   color: #048298; /* Color cuando el cursor está sobre el enlace */
 }
@@ -180,4 +183,170 @@ span {
   display: flex;
   width: 85%;
   flex-flow: row wrap;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Espaciado entre los botones */
+  font-family: Arial, sans-serif;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+.pagination a:hover {
+  background-color: #f0f0f0; /* Fondo claro al pasar el mouse */
+  border-color: #bbb; /* Cambia el color del borde */
+}
+
+.pagination a.active {
+  color: #333;
+  border: 1px solid #ddd; /* Bordes suaves */
+}
+
+.pagination a.prev,
+.pagination a.next {
+  font-weight: bold;
+}
+
+.pagination a.prev:hover,
+.pagination a.next:hover {
+  background-color: #2cbe00;
+  color: white;
+}
+.start-adoption {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  margin-top: 20px; /* Espaciado entre el paginado y el botón */
+}
+
+.start-adoption button {
+  background-color: #0097b2; /* Color de fondo del botón */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor a "puntero" al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Efecto de transición al pasar el ratón */
+}
+
+.start-adoption button:hover {
+  background-color: #0097b2; /* Color de fondo al pasar el ratón */
+}
+
+/* Footer general */
+.site-footer {
+  background-color: #82c34a; /* Verde del fondo */
+  color: #000; /* Color del texto */
+  padding: 20px 10px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items:  flex-end;;
+  gap: 20px;
+  position: relative; /* Por si necesitas ajustar posiciones */
+  padding-bottom: 20px; /* Espacio adicional para alinear */
+}
+
+/* Estilo del bloque de boletín */
+.newsletter {
+  flex: 1;
+  text-align: center;
+  max-width: 33%;
+}
+.newsletter h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.newsletter p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.subscribe-button {
+  background-color: #00a6b6; /* Azul del botón */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subscribe-button:hover {
+  background-color: #008b99; /* Azul más oscuro al pasar el ratón */
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+  flex: 1;
+  text-align: left;
+  max-width: 33%;
+  display: flex;
+  align-items: flex-end; /* Asegura que estén alineados al fondo */
+}
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+/* Links de navegación */
+.footer-links {
+  flex: 1;
+  text-align: right;
+  max-width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Alinea los enlaces al fondo */
+  justify-content: flex-end; /* Asegura que estén en la parte inferior */
+}
+
+.footer-links a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Copyright */
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #000;
+  text-align: center;
+  width: 100%; /* Ocupa todo el ancho */
+  position: relative; /* Para alinearse correctamente con otros elementos */
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+    margin-top: 15px;
+  }
 }
