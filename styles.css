@@ -38,9 +38,12 @@ label {
 }
 
 .header {
-  background-image: url("fondo2.png");
-  height: 450px;
+  background-image: url("fondo.jpg");
+  height: 100vh;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 10%;
 }
 
 .pointer {
@@ -53,56 +56,97 @@ body {
 
 .eslogan {
   font-size: 3.5rem;
-  text-align: right;
-  padding: 130px 20px 0 0;
+  text-align: left;
+  color: white;
+  width: 100%;
 }
 
 .cont-desc {
-  background-color: #ffffff;
-  width: 80%;
-  margin: 0 auto;
-  height: 50px;
-  border-radius: 20px;
-  position: relative;
-  top: -25px;
+  margin: 50px auto 10vh auto;
+  max-width: 80%;
+  height: 60vh;
   display: flex;
+  flex-flow: column;
   align-items: center;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.patita {
+  height: 40vh;
+}
+
+main + .patita {
+  margin-top: 30vh;
 }
 
 .desc-caan {
   font-size: 1.3rem;
   text-align: center;
-  width: 100%;
+  line-height: 2;
+}
+
+.boton-home .desc-caan {
+  text-align: left;
+}
+
+.cont-desc .subscribe-button {
+  margin: 20px 0;
+}
+
+.animated-photo {
+  animation: rotateAnimation 3s infinite linear;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .cont-boton-home {
-  border-radius: 100%;
-  background-color: #9fe5ff;
-}
-
-.cont-boton-home img {
-  width: 150px;
-  height: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .boton-home {
-  background-color: #ffffff;
-  width: 200px;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
-  padding: 15px;
+  padding: 10% 10%;
+  margin-bottom: 10vh;
+  margin-top: 10vh;
 }
 
 main {
   display: flex;
   justify-content: space-evenly;
+  height: 100vh;
+  padding: 10% 0;
 }
 
-.carousel-inner {
-  padding: 50px 60px;
+.title-home {
+  font-size: 5.75rem;
+  text-transform: uppercase;
+  margin: 10vh 0 5vh 0;
+}
+
+.boton-home .title-home {
+  margin-bottom: 10vh;
 }
 
 .carousel-control-prev-icon {
@@ -126,13 +170,13 @@ main {
 }
 
 .home-title-gal {
-  text-transform: uppercase;
   background: #ffffff;
   text-align: center;
   border-radius: 20px 20px 0 0;
   margin: 0;
   padding: 10px;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  margin: 10vh 0;
 }
 
 .panel-adopta {
@@ -142,11 +186,13 @@ main {
 .filtros {
   display: flex;
   flex-flow: column;
+  width: 20%; 
+  margin-top: 20px
 }
 
 .cont-animal {
-  width: 250px;
-  padding: 15px;
+  width: 27%;
+  margin: 30px 0% 5% 5%;
   background: #ffffff;
   border-radius: 20px;
   display: flex;
@@ -181,14 +227,16 @@ span {
 
 .galeria {
   display: flex;
-  width: 85%;
+  width: 100%;
   flex-flow: row wrap;
+  margin-left: 5%;
 }
 
 .pagination {
+  margin: 30px 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
+  align-items: end;
   gap: 10px; /* Espaciado entre los botones */
   font-family: Arial, sans-serif;
 }
@@ -225,7 +273,7 @@ span {
 .start-adoption {
   display: flex;
   justify-content: center; /* Centra el botón horizontalmente */
-  margin-top: 20px; /* Espaciado entre el paginado y el botón */
+ 
 }
 
 .start-adoption button {
@@ -256,9 +304,11 @@ span {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
+  justify-self: center;
   gap: 20px;
   position: relative; /* Por si necesitas ajustar posiciones */
   padding-bottom: 20px; /* Espacio adicional para alinear */
+  max-width: 80%;
 }
 
 /* Estilo del bloque de boletín */
@@ -279,12 +329,12 @@ span {
 
 .subscribe-button {
   background-color: #00a6b6; /* Azul del botón */
-  color: white;
+  color: white!important;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .subscribe-button:hover {
@@ -355,6 +405,7 @@ span {
   background-color: #bdbdbd;
   display: flex;
   justify-content: center;
+  height: 280px;
 }
 
 .mercado-pago,
@@ -363,13 +414,14 @@ span {
   display: flex;
   flex-flow: column;
   align-items: center;
-  background-color: #d3dfbe;
+  
   margin: 20px 0;
   border-radius: 20px;
   width: 460px;
 }
 
-.mercado-pago button, .mercado-pago input {
+.mercado-pago button,
+.mercado-pago input {
   width: 100px;
   font-size: 20px;
   margin-top: 1rem;
@@ -382,6 +434,7 @@ span {
 }
 
 .mercado-pago p {
+  font-size: 20px;
   margin: 1rem 0 0 0;
   font-weight: 500;
 }
@@ -401,12 +454,12 @@ span {
 }
 
 .suscrip {
-  padding: 30px;
-  background-color: #d3dfbe;
-  margin-bottom: 20px;
+  
+  width: 100%;
+  margin: 10vh 0;
   border-radius: 20px;
   display: flex;
-  flex-flow:column;
+  flex-flow: column;
   align-items: center;
 }
 .boton-accion {
@@ -414,4 +467,8 @@ span {
   width: 30px;
   height: 30px;
   margin-left: 5px;
+}
+
+form input {
+  border: 1px solid black !important;
 }
