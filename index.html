@@ -18,75 +18,140 @@
   </head>
   <body>
     <div data-include-html="navbar.html"></div>
-    <div class="container">
+    <div class="container-fluid" style="padding: 0">
       <div class="header">
         <h1 class="eslogan">"Rescata, protege, adopta"</h1>
       </div>
       <div class="cont-desc">
+        <h1 class="title-home">C.A.A.N</h1>
+        <h2>Centro de Ayuda al Animal de Necochea</h2>
         <h2 class="desc-caan">
-          En el CAAN trabajamos por un mundo en el que cada animal tenga un
-          hogar seguro y una vida digna.
+          Trabajamos por un mundo en el que cada animal tenga un hogar seguro y
+          una vida digna.
         </h2>
       </div>
+
+      <div
+        style="
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          height: 50vh;
+        "
+      >
+        <img src="pata1.png" style="height: 100px" class="animated-photo" />
+      </div>
+
       <main>
         <div class="boton-home">
           <h3 class="title-home">Adopta</h3>
           <div class="cont-boton-home">
-            <img src="pata1.png" alt="icono huella can" />
-          </div>
-        </div>
-        <div class="boton-home">
-          <h3 class="title-home">Donar</h3>
-          <div class="cont-boton-home">
-            <img src="pata2.png" alt="icono huella can" />
-          </div>
-        </div>
-        <div class="boton-home">
-          <h3 class="title-home">Voluntario</h3>
-          <div class="cont-boton-home">
-            <img src="pata3.png" alt="icono huella can" />
+            <div style="width: 50%">
+              <img
+                src="adopcion-home.jpg"
+                alt="gato en adopción"
+                style="object-fit: cover; width: 100%"
+              />
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-flow: column;
+                width: 50%;
+                padding: 25px;
+                height: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <h2 class="desc-caan">
+                La adopción de una mascota no solo brinda un hogar amoroso a un
+                animal necesitado, sino que también enriquece tu vida con
+                compañía, alegría y amor incondicional. Cada vez que abres tu
+                hogar a una mascota rescatada, liberas espacio en los refugios y
+                permites que otra vida pueda ser salvada. Acompáñanos en esta
+                noble causa, da el paso y descubre la felicidad que solo una
+                mascota adoptada puede ofrecer.
+              </h2>
+              <a class="subscribe-button" href="adopta.html">Mira quiénes te están esperando</a>
+            </div>
           </div>
         </div>
       </main>
 
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <h4 class="home-title-gal">Mascotas adoptadas</h4>
-          <div class="carousel-item active">
-            <div class="pad">
-              <img src="galeriahome.png" class="d-block w-100" alt="..." />
+      <div
+        style="
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          height: 50vh;
+          align-items: flex-end;
+        "
+      >
+        <img src="pata1.png" style="height: 100px" class="animated-photo" />
+      </div>
+
+      <div class="cont-desc">
+        <h1 class="title-home">DONA</h1>
+        <h2>Tu colaboración salva y transforma vidas</h2>
+        <h2 class="desc-caan">
+          Los animales que rescatamos suelen necesitar urgentemente tratamientos
+          y medicamentos, tanto como abrigo de las temperaturas extremas y
+          alimentación. Hay muchas maneras de colaborar.
+        </h2>
+        <a class="subscribe-button" href="donar.html">Descubre cómo ayudar</a>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          width: 100%;
+          justify-content: center;
+          height: 50vh;
+        "
+      >
+        <img src="pata1.png" style="height: 100px" class="animated-photo" />
+      </div>
+
+      <main style="margin-bottom: 50px">
+        <div class="boton-home">
+          <h3 class="title-home">Hazte voluntario</h3>
+          <div class="cont-boton-home">
+            <div
+              style="
+                display: flex;
+                flex-flow: column;
+                width: 50%;
+                padding: 25px;
+                height: 100%;
+                justify-content: space-evenly;
+                align-items: center;
+              "
+            >
+              <h2 class="desc-caan">
+                En nuestra organización, cada voluntario es una pieza vital de
+                un engranaje que trabaja incansablemente para brindar amor,
+                cuidado y un hogar temporal a los animales que más lo necesitan.
+                Ser voluntario no solo es una oportunidad de dar, sino también
+                de recibir inmensas recompensas emocionales. Desde los momentos
+                de ternura con nuestros amigos de cuatro patas hasta la
+                satisfacción de verlos encontrar su hogar definitivo, tu tiempo
+                y dedicación tienen un impacto directo y significativo. Únete a
+                nosotros y experimenta la magia de transformar vidas, incluyendo
+                la tuya.
+              </h2>
+              <a class="subscribe-button" href="voluntarios.html">Entérate cómo hacer la diferencia</a>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="pad">
-              <img src="galeriahome.png" class="d-block w-100" alt="..." />
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="pad">
-              <img src="galeriahome.png" class="d-block w-100" alt="..." />
+            <div style="width: 50%">
+              <img
+                src="voluntario.png"
+                alt="persona al cuidado de un perro"
+                style="object-fit: cover; width: 100%"
+              />
             </div>
           </div>
         </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExample"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+      </main>
     </div>
     <div data-include-html="footer.html"></div>
 
@@ -95,6 +160,6 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
-    ></script>     
+    ></script>
   </body>
 </html>

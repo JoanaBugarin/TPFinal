@@ -38,9 +38,12 @@ label {
 }
 
 .header {
-  background-image: url("fondo2.png");
-  height: 450px;
+  background-image: url("fondo.jpg");
+  height: 100vh;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 10%;
 }
 
 .pointer {
@@ -53,56 +56,71 @@ body {
 
 .eslogan {
   font-size: 3.5rem;
-  text-align: right;
-  padding: 130px 20px 0 0;
-}
-
-.cont-desc {
-  background-color: #ffffff;
-  width: 80%;
-  margin: 0 auto;
-  height: 50px;
-  border-radius: 20px;
-  position: relative;
-  top: -25px;
-  display: flex;
-  align-items: center;
-}
-
-.desc-caan {
-  font-size: 1.3rem;
-  text-align: center;
+  text-align: left;
+  color: white;
   width: 100%;
 }
 
-.cont-boton-home {
-  border-radius: 100%;
-  background-color: #9fe5ff;
-}
-
-.cont-boton-home img {
-  width: 150px;
-  height: 160px;
-}
-
-.boton-home {
-  background-color: #ffffff;
-  width: 200px;
+.cont-desc {
+  margin: 0 auto;
+  height: 100vh;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
-  padding: 15px;
+}
+
+.desc-caan {
+  font-size: 1.3rem;
+  text-align: left;
+  line-height: 2;
+}
+
+.animated-photo {
+  animation: rotateAnimation 3s infinite linear;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.cont-boton-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boton-home {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
 }
 
 main {
   display: flex;
   justify-content: space-evenly;
+  height: 100vh;
 }
 
-.carousel-inner {
-  padding: 50px 60px;
+.title-home {
+  font-size: 5.75rem;
+  text-transform: uppercase;
 }
 
 .carousel-control-prev-icon {
@@ -278,12 +296,12 @@ span {
 
 .subscribe-button {
   background-color: #00a6b6; /* Azul del botón */
-  color: white;
+  color: white!important;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .subscribe-button:hover {
@@ -368,7 +386,8 @@ span {
   width: 460px;
 }
 
-.mercado-pago button, .mercado-pago input {
+.mercado-pago button,
+.mercado-pago input {
   width: 100px;
   font-size: 20px;
   margin-top: 1rem;
@@ -405,7 +424,7 @@ span {
   margin-bottom: 20px;
   border-radius: 20px;
   display: flex;
-  flex-flow:column;
+  flex-flow: column;
   align-items: center;
 }
 .boton-accion {
