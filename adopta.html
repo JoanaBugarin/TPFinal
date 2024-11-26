@@ -18,13 +18,13 @@
   </head>
   <body>
     <div data-include-html="navbar.html"></div>
+    <div class="headers-container">
+      <img
+        src="adopta_header.png"
+        style="max-width: 100%; height: auto; object-fit: cover"
+      />
+    </div>
     <div class="container">
-      <div class="headers-container">
-        <img
-          src="adopta_header.png"
-          style="max-width: 100%; height: auto; object-fit: cover"
-        />
-      </div>
       <!-- Modal -->
       <div
         class="modal fade"
@@ -91,7 +91,7 @@
         </div>
       </div>
       <div class="panel-adopta mt-3">
-        <div class="filtros" style="width: 20%; margin-top: 2px">
+        <div class="filtros" >
           <h1 style="font-size: 18px">Filtros</h1>
           <h2>Especie</h2>
           <a href="adopta.html">Perro</a>
@@ -119,8 +119,8 @@
           <a href="adopta.html">Apto para departamento</a>
           <a href="adopta.html">Cuidados médicos especiales</a>
         </div>
-        <div class="galeria" style="width: 80%">
-          <div class="cont-animal" style="margin: 5px 10px">
+        <div class="galeria" style="width: 100%">
+          <div class="cont-animal" >
             <img src="perro1.png" alt="" />
             <h3>Nombre</h3>
             <div class="carac-animal">
@@ -143,7 +143,7 @@
             </div>
           </div>
 
-          <div class="cont-animal" style="margin: 5px 10px">
+          <div class="cont-animal" >
             <img src="perro1.png" alt="" />
             <h3>Nombre</h3>
             <div class="carac-animal">
@@ -166,7 +166,7 @@
             </div>
           </div>
 
-          <div class="cont-animal" style="margin: 5px 10px">
+          <div class="cont-animal" >
             <img src="perro1.png" alt="" />
             <h3>Nombre</h3>
             <div class="carac-animal">
@@ -189,7 +189,7 @@
             </div>
           </div>
 
-          <div class="cont-animal" style="margin: 5px 10px">
+          <div class="cont-animal" >
             <img src="perro1.png" alt="" />
             <h3>Nombre</h3>
             <div class="carac-animal">
@@ -212,7 +212,7 @@
             </div>
           </div>
 
-          <div class="cont-animal" style="margin: 5px 10px">
+          <div class="cont-animal" >
             <img src="perro1.png" alt="" />
             <h3>Nombre</h3>
             <div class="carac-animal">
@@ -235,7 +235,7 @@
             </div>
           </div>
 
-          <div class="cont-animal" style="margin: 5px 10px">
+          <div class="cont-animal" >
             <img src="perro1.png" alt="" />
             <h3>Nombre</h3>
             <div class="carac-animal">
@@ -259,17 +259,20 @@
           </div>
         </div>
       </div>
-    </div>
-    <nav class="pagination" style="width: 100%; margin: 5px 0">
-      <a href="#" class="prev">&laquo; Anterior</a>
-      <a href="#" class="page active">1</a>
-      <a href="#" class="page">2</a>
-      <a href="#" class="page">3</a>
-      <a href="#" class="page">4</a>
-      <a href="#" class="next">Siguiente &raquo;</a>
-    </nav>
-    <div class="start-adoption mb-4">
-      <button onclick="location.href='adopta.html'">Iniciar Adopción</button>
+      <nav class="pagination">
+        <div>
+
+          <a href="#" class="prev">&laquo; Anterior</a>
+          <a href="#" class="page active">1</a>
+          <a href="#" class="page">2</a>
+          <a href="#" class="page">3</a>
+          <a href="#" class="page">4</a>
+          <a href="#" class="next">Siguiente &raquo;</a>
+        </div>
+      </nav>
+      <div class="start-adoption mb-4">
+        <button onclick="location.href='adopta.html'">Iniciar Adopción</button>
+      </div>
     </div>
     <div data-include-html="footer.html"></div>
 
