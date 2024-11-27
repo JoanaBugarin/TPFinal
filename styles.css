@@ -163,14 +163,16 @@ main {
   height: 5rem !important;
 }
 
+.carousel-item.active {
+  margin-bottom: 20px; /* Ajusta el valor del margin según lo que necesites */
+}
 .pad {
   padding: 0 60px 40px 60px;
-  background-color: #ffffff;
+
   border-radius: 0 0 20px 20px;
 }
 
 .home-title-gal {
-  background: #ffffff;
   text-align: center;
   border-radius: 20px 20px 0 0;
   margin: 0;
