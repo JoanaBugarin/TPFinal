@@ -479,3 +479,16 @@ span {
 form input {
   border: 1px solid black !important;
 }
+
+form.volunteer-form input {
+  padding-left: 10px; /* Ajusta el valor según tus necesidades */
+}
+
+form.volunteer-form label {
+  padding-left: 10px; /* Ajusta el valor según tus necesidades */
+  display: block; /* Asegura que el padding se aplique correctamente */
+}
+
+form.volunteer-form input.form-control {
+  margin-left: 10px; /* Ajusta el valor según tus necesidades */
+}

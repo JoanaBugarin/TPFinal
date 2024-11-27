@@ -26,13 +26,7 @@
     </div>
     <div class="container">
       <div style="max-width: 1920px; margin-top: 50px">
-        <div
-          style="
-            display: flex;
-            flex-flow: row wrap;
-            justify-content: space-around;
-          "
-        >
+        <div style="display: flex; flex-flow: row wrap; justify-content: space-around;">
           <div class="mercado-pago">
             <img
               src="meli.png"
@@ -46,16 +40,7 @@
             <button class="subscribe-button btn-donar">Donar</button>
           </div>
           <div class="cc">
-            <h1
-              style="
-                font-size: 1.8rem;
-                color: #0097b2;
-                margin-bottom: 50px;
-                font-weight: 100;
-              "
-            >
-              Datos de la cuenta corriente
-            </h1>
+            <h1 style="font-size: 1.8rem; color: #0097b2; margin-bottom: 50px; font-weight: 100;">Datos de la cuenta corriente</h1>
             <img src="/Nueva carpeta/credicoop.png" alt="" />
             <p>Banco Crediccop</p>
             <p>CBU:</p>
@@ -65,120 +50,217 @@
           </div>
         </div>
         <!-- Modal -->
-        <div
-        class="modal fade"
-        id="subscribeModal"
-        tabindex="-1"
-        aria-labelledby="subscribeModalLabel"
-        aria-hidden="true"
-        >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header" style="border: none; justify-content: center">
-              <h1
-                class="modal-title fs-5"
-                id="subscribeModalLabel"
-                style="
-                  font-size: 2.25rem !important;
-                  width: 100%;
-                  color: #0097b2;
-                  text-align: center;
-                "
-              >
-                Suscribirse
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form>
-                <div class="mb-3">
-                  <label for="name" class="col-form-label">Nombre:</label>
-                  <input type="text" class="form-control" id="name" required />
+        <div class="modal fade" id="subscribeModal" tabindex="-1" aria-labelledby="subscribeModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header" style="border: none; justify-content: center">
+                <h1 class="modal-title fs-5" id="subscribeModalLabel" style="font-size: 2.25rem !important; width: 100%; color: #0097b2; text-align: center;">
+                  Suscribirse
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                        <!-- Mensaje de éxito oculto inicialmente -->
+                  <div id="successMessage" style="display: none; text-align: center; font-size: 1.2rem; color: #00bf63;">
+                    <strong>¡Éxito! Se realizó la suscripción de donación mensual.</strong>
+                  </div>
+                <!-- Formulario -->
+                <form id="donationForm">
+                  <div class="mb-3">
+                    <label for="donorName" class="col-form-label">Nombre completo:</label>
+                    <input type="text" class="form-control" id="donorName" placeholder="Juan Pérez" required />
+                    <div class="invalid-feedback">
+                      Por favor, escribe tu nombre completo (nombre y apellido).
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="docType" class="col-form-label">Tipo de documento:</label>
+                    <select class="form-control" id="docType" required>
+                      <option value="">Seleccionar...</option>
+                      <option value="DNI">DNI</option>
+                      <option value="Pasaporte">Pasaporte</option>
+                      <option value="Cédula">Cédula</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="docNumber" class="col-form-label">Número de documento:</label>
+                    <input type="number" class="form-control" id="docNumber" placeholder="12345678" required />
+                    <div class="invalid-feedback">
+                      Por favor, ingresa tu número de documento (mínimo 8 dígitos).
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="bank" class="col-form-label">Banco:</label>
+                    <input type="text" class="form-control" id="bank" placeholder="Banco Nación" required />
+                    <div class="invalid-feedback">
+                      Por favor, ingresa el nombre del banco.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="cbu" class="col-form-label">C.B.U:</label>
+                    <input type="text" class="form-control" id="cbu" placeholder="1910103555010300835150" required />
+                    <div class="invalid-feedback">
+                      El CBU debe tener 22 dígitos.
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="amount" class="col-form-label">Monto:</label>
+                    <input type="number" class="form-control" id="amount" placeholder="1000" required />
+                    <div class="invalid-feedback">
+                      Por favor, ingresa un monto válido (mayor a 0).
+                    </div>
+                  </div>
+                </form>
+                <div id="warningMessage" style="color: #dc3545; display: none; text-align: center;">
+                  <strong>Por favor, complete todos los campos antes de enviar.</strong>
                 </div>
-                <div class="mb-3">
-                  <label for="surname" class="col-form-label">Apellido:</label>
-                  <input type="text" class="form-control" id="surname" required />
-                </div>
-                <div class="mb-3">
-                  <label for="docType" class="col-form-label">Tipo de documento:</label>
-                  <select class="form-control" id="docType" required>
-                    <option value="DNI">DNI</option>
-                    <option value="Pasaporte">Pasaporte</option>
-                    <option value="Cédula">Cédula</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <label for="docNumber" class="col-form-label">Número de documento:</label>
-                  <input type="number" class="form-control" id="docNumber" required />
-                </div>
-                <div class="mb-3">
-                  <label for="bank" class="col-form-label">Banco:</label>
-                  <input type="text" class="form-control" id="bank" required />
-                </div>
-                <div class="mb-3">
-                  <label for="cbu" class="col-form-label">C.B.U:</label>
-                  <input type="text" class="form-control" id="cbu" required />
-                </div>
-                <div class="mb-3">
-                  <label for="amount" class="col-form-label">Monto:</label>
-                  <input type="number" class="form-control" id="amount" required />
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer" style="justify-content: center; border: none">
-              <button
-                type="button"
-                class="btn btn-primary"
-                style="
-                  background-color: #00bf63;
-                  border-radius: 20px;
-                  border: none;
-                  padding: 10px 20px;
-                "
-              >
-                Confirmar
-              </button>
+              </div>
+              <div class="modal-footer" style="justify-content: center; border: none">
+                <button id="confirmButton" type="submit" form="donationForm" class="btn btn-primary" style="background-color: #00bf63; border-radius: 20px; border: none; padding: 10px 20px;">
+                  Confirmar
+                </button>
+              </div>
+            
             </div>
           </div>
-        </div>
         </div>
 
         <!-- Botón para abrir el modal -->
         <div class="suscrip">
-          <button
-            class="subscribe-button"
-            style="font-size: 20px"
-            data-bs-toggle="modal"
-            data-bs-target="#subscribeModal"
-          >
+          <button class="subscribe-button" style="font-size: 20px" data-bs-toggle="modal" data-bs-target="#subscribeModal">
             Suscribirme a la donación mensual
           </button>
-          <h2 style="font-size: 1.5rem; font-weight: 400; margin: 20px 0">
-            ¿Qué implica una suscripción para donar mensualmente a una
-            asociación protectora de animales?
-          </h2>
-          <p>
-            Al suscribirte como donante mensual, te conviertes en un aliado
-            clave en la misión de proteger y cuidar a los animales. Este
-            compromiso recurrente asegura que podamos contar con un ingreso
-            estable para cubrir necesidades esenciales como alimentación,
-            atención veterinaria, refugio y rescate.
-          </p>
         </div>
       </div>
     </div>
     <div data-include-html="footer.html"></div>
 
     <script src="include.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("donationForm");
+  const donorName = document.getElementById("donorName");
+  const docType = document.getElementById("docType");
+  const docNumber = document.getElementById("docNumber");
+  const bank = document.getElementById("bank");
+  const cbu = document.getElementById("cbu");
+  const amount = document.getElementById("amount");
+  const warningMessage = document.getElementById("warningMessage");
+  const successMessage = document.getElementById("successMessage");
+  const modalBody = document.querySelector(".modal-body");
+
+  // Función para mostrar el mensaje de advertencia
+  function showWarning() {
+    warningMessage.style.display = "block";
+  }
+
+  // Ocultar mensaje de advertencia
+  function hideWarning() {
+    warningMessage.style.display = "none";
+  }
+
+  // Validar Nombre Completo
+  function validateName() {
+    const nameParts = donorName.value.trim().split(" ");
+    if (nameParts.length < 2 || nameParts.some(part => part.length < 2)) {
+      donorName.classList.add("is-invalid"); // Añadir clase is-invalid para el campo incorrecto
+      return false;
+    } else {
+      donorName.classList.remove("is-invalid"); // Eliminar la clase si la validación es correcta
+      return true;
+    }
+  }
+
+  // Validar Tipo de Documento
+  function validateDocType() {
+    if (!docType.value) {
+      docType.classList.add("is-invalid");
+      return false;
+    } else {
+      docType.classList.remove("is-invalid");
+      return true;
+    }
+  }
+
+  // Validar Número de Documento
+  function validateDocNumber() {
+    if (!docNumber.value || docNumber.value.length < 8) {
+      docNumber.classList.add("is-invalid");
+      return false;
+    } else {
+      docNumber.classList.remove("is-invalid");
+      return true;
+    }
+  }
+
+  // Validar Banco
+  function validateBank() {
+    const bankRegex = /^[a-zA-ZÀ-ÿ\s]+$/;
+    if (!bank.value || !bankRegex.test(bank.value)) {
+      bank.classList.add("is-invalid");
+      return false;
+    } else {
+      bank.classList.remove("is-invalid");
+      return true;
+    }
+  }
+
+  // Validar CBU
+  function validateCbu() {
+    const cbuRegex = /^\d{22}$/;
+    if (!cbu.value || !cbuRegex.test(cbu.value)) {
+      cbu.classList.add("is-invalid");
+      return false;
+    } else {
+      cbu.classList.remove("is-invalid");
+      return true;
+    }
+  }
+
+  // Validar Monto
+  function validateAmount() {
+    if (!amount.value || amount.value <= 0) {
+      amount.classList.add("is-invalid");
+      return false;
+    } else {
+      amount.classList.remove("is-invalid");
+      return true;
+    }
+  }
+
+  // Validación al enviar el formulario
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const isNameValid = validateName();
+    const isDocTypeValid = validateDocType();
+    const isDocNumberValid = validateDocNumber();
+    const isBankValid = validateBank();
+    const isCbuValid = validateCbu();
+    const isAmountValid = validateAmount();
+
+    if (isNameValid && isDocTypeValid && isDocNumberValid && isBankValid && isCbuValid && isAmountValid) {
+      hideWarning();
+       // Mostrar mensaje de éxito
+       form.style.display = "none"; // Ocultar formulario
+      successMessage.style.display = "block"; // Mostrar mensaje de éxito
+      document.getElementById("subscribeModalLabel").style.display = "none"; // Ocultar título
+      document.getElementById("confirmButton").style.display = "none"; // Ocultar botón de confirmar
+    } else {
+      showWarning();
+    }
+  });
+
+  // Validaciones inmediatas
+  donorName.addEventListener("input", validateName);
+  docType.addEventListener("change", validateDocType);
+  docNumber.addEventListener("input", validateDocNumber);
+  bank.addEventListener("input", validateBank);
+  cbu.addEventListener("input", validateCbu);
+  amount.addEventListener("input", validateAmount);
+});
+    </script>
   </body>
 </html>
