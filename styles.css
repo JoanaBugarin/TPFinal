@@ -186,8 +186,8 @@ main {
 .filtros {
   display: flex;
   flex-flow: column;
-  width: 20%; 
-  margin-top: 20px
+  width: 20%;
+  margin-top: 20px;
 }
 
 .cont-animal {
@@ -199,7 +199,7 @@ main {
   align-items: center;
 }
 
-.cont-animal-modal{
+.cont-animal-modal {
   margin: 0 auto;
   border-radius: 20px;
   display: flex;
@@ -280,7 +280,6 @@ span {
 .start-adoption {
   display: flex;
   justify-content: center; /* Centra el botón horizontalmente */
- 
 }
 
 .start-adoption button {
@@ -301,21 +300,20 @@ span {
 /* Footer general */
 .site-footer {
   background-color: #7ab317; /* Verde del fondo */
-  color: #000; /* Color del texto */
+  color: #333; /* Color del texto */
   padding: 20px 10px;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
 }
 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-  justify-self: center;
   gap: 20px;
-  position: relative; /* Por si necesitas ajustar posiciones */
-  padding-bottom: 20px; /* Espacio adicional para alinear */
-  max-width: 80%;
+  width: 80%;
 }
 
 /* Estilo del bloque de boletín */
@@ -336,7 +334,7 @@ span {
 
 .subscribe-button {
   background-color: #00a6b6; /* Azul del botón */
-  color: white!important;
+  color: white !important;
   border: none;
   padding: 10px 20px;
   border-radius: 20px;
@@ -371,10 +369,12 @@ span {
   flex-direction: column;
   align-items: flex-end; /* Alinea los enlaces al fondo */
   justify-content: flex-end; /* Asegura que estén en la parte inferior */
+  font-size: 1.5rem;
 }
 
 .footer-links a {
-  color: #000;
+  color: #333;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   display: block;
@@ -387,12 +387,10 @@ span {
 
 /* Copyright */
 .footer-copyright {
-  margin-top: 20px;
-  font-size: 12px;
-  color: #000;
-  text-align: center;
+  font-size: 14px;
+  color: #333;
+  text-align: right;
   width: 100%; /* Ocupa todo el ancho */
-  position: relative; /* Para alinearse correctamente con otros elementos */
 }
 
 /* Diseño responsive */
@@ -421,7 +419,7 @@ span {
   display: flex;
   flex-flow: column;
   align-items: center;
-  
+
   margin: 20px 0;
   border-radius: 20px;
   width: 460px;
@@ -461,7 +459,6 @@ span {
 }
 
 .suscrip {
-  
   width: 100%;
   margin: 10vh 0;
   border-radius: 20px;
