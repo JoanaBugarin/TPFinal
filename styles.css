@@ -409,15 +409,24 @@ span {
 }
 
 .headers-container {
-  background-color: #696969;
+  background-color: #bdbdbd;
   display: flex;
   justify-content: center;
-  height: 280px;
   position: relative; /* Necesario para que los pseudo-elementos se posicionen correctamente */
   margin: 0; /* Asegúrate de que no haya margen en el contenedor */
   width: 100vw; /* Forzar a usar todo el ancho del viewport */
   left: 50%;
   transform: translateX(-50%); /* Centrar correctamente */
+}
+
+@media (max-width: 600px) {
+  .img-dona-pc {
+    display: none!important; 
+  }
+  .img-dona-mobile {
+    display: block!important;
+    padding: 0 5px 5px 5px;
+  }
 }
 
 .mercado-pago,
@@ -495,28 +504,4 @@ form.volunteer-form label {
 
 form.volunteer-form input.form-control {
   margin-left: 10px; /* Ajusta el valor según tus necesidades */
-}
-
-.headers-container::before,
-.headers-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50vw; /* Cada rectángulo ocupa la mitad del viewport */
-  background-color: #bebebe; /* Cambia este color según lo que necesites */
-  z-index: 0; /* Se coloca detrás del contenido */
-}
-
-.headers-container::before {
-  left: 0; /* Rectángulo izquierdo */
-}
-
-.headers-container::after {
-  right: 0; /* Rectángulo derecho */
-}
-
-.header-image {
-  position: relative;
-  z-index: 1; /* La imagen queda encima de los rectángulos */
 }
